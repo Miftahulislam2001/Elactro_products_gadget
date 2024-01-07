@@ -9,6 +9,7 @@ import {
 import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
+import Shop from './components/Shop.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,18 +19,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home/>
+      },
+      {
+        path: "/shop",
+        element: <Shop/>,
+        loader: ()=> fetch('products.json')
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About/>
       }
     ]
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  
     <RouterProvider router={router} />
-  </React.StrictMode>,
+  
 )
