@@ -10,6 +10,9 @@ import Home from './components/Home.jsx';
 import About from './components/About.jsx';
 import ErrorPage from './components/ErrorPage.jsx';
 import Shop from './components/Shop.jsx';
+import Cart from './components/Cart.jsx';
+import { productsAndCartData } from './Loader/getCart&ProductsData.js';
+
 
 const router = createBrowserRouter([
   {
@@ -29,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About/>
+      },
+      {
+        path: "/cart",
+        element: <Cart/>,
+        loader: productsAndCartData,
       }
     ]
   },
