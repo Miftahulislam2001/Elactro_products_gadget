@@ -1,11 +1,12 @@
-import React from 'react';
-
 const Footer = () => {
     return (
-        <div>
-            <h3>This is Footer Compo</h3>
+      <footer className='divide-y  text-gray-800'>
+        <div></div>
+        <div className='py-6 text-sm text-center text-gray-400'>
+          © 2024 ElectroGadget Inc. All rights reserved.
         </div>
-    );
-};
-
-export default Footer;
+      </footer>
+    )
+  }
+  
+  export default Footer
