@@ -4,11 +4,15 @@ import ProductsCard from './ProductsCard';
 
 const Shop = () => {
     const productsData = useLoaderData()
+
+    const handleAddToCart = (id)=>{
+        console.log(id);
+    }
   
     return (
         <div className='product-container'>
             {
-                productsData.map(product => <ProductsCard product={product} key={product.id}/>)
+                productsData.map(product => <ProductsCard product={product} key={product.id} handleAddToCart={handleAddToCart}/>)
             }
         </div>
     );
