@@ -12,6 +12,7 @@ import ErrorPage from './components/ErrorPage.jsx';
 import Shop from './components/Shop.jsx';
 import Cart from './components/Cart.jsx';
 import { productsAndCartData } from './Loader/getCart&ProductsData.js';
+import { Toaster } from 'react-hot-toast';
 
 
 const router = createBrowserRouter([
@@ -45,6 +46,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
-    <RouterProvider router={router} />
+    <>
+      <Toaster/>
+      <RouterProvider router={router} />
+    </>
   
 )
